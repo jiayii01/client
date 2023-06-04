@@ -2,7 +2,11 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
+
 
 body {
   background-image: url(https://www.gardensbythebay.com.sg/content/dam/gbb-2021/image/learn-with-us/explore-resources/wallpapers/custom/GBB-wallpaper-overview-night-02-1920x1080.jpg);

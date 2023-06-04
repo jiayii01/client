@@ -113,7 +113,7 @@ const App = () => {
             <div className="row">
                 {documents.map((document) => (
                   <div className="col-md-4">
-                  <div class="card m-1" style={{width: '23rem', height: '19rem'}}>
+                  <div class="card m-1" style={{width: '23rem', height: '21rem'}}>
                     <div class="card-body">
                       <h5 class="card-title">{document._source.name}<span class="badge rounded-pill text-bg-success ms-4">{document._source.rating}</span></h5>
                       <span class="badge text-bg-primary">{document._source.type}</span>
@@ -123,8 +123,7 @@ const App = () => {
                           <span class="badge text-bg-light">{tag}</span>
                         ))
                       }
-
-                      <p><small>Official Site: {document._source.officialWebsite}</small></p>
+                      <p class="mt-1"><small><a href={document._source.officialWebsite} target="_blank" rel="noreferrer">Link to Official Site: {document._source.officialWebsite}</a></small></p>
                     </div>
                   </div>
                   </div>
