@@ -34,13 +34,14 @@ const App = () => {
   return (
     <div className='app'>
       <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand m-2 h1"><b>Singapore Attractions</b></span>
+        <span class="navbar-brand m-2 h1"><b>Singapore Attractions 🇸🇬</b></span>
       </nav>
       <p className='directions'>
         {' '}
         Search for attractions in Singapore using the following criteria:
       </p>
       <div className='main'>
+        <div class="container">
         <div className='type-selector'>
         <div class="row g-2">
           <div class="col-md">
@@ -84,37 +85,35 @@ const App = () => {
               <option value='5'>5</option>
             </select>
           </div>
+          <div className="col-md">
+          <select
+            name='sortOption'
+            id='sortOption'
+            class="form-select"
+            value={chosenSortOption}
+            onChange={(e) => setchosenSortOption(e.target.value)}
+          >
+            <option value={null}>Sort by</option>
+            <option value='desc'>Highest Rating First</option>
+            <option value='asc'>Lowest Rating First</option>
+          </select>
+          </div>
+          <div className="col-md">
+            <button type="button" class="btn btn-secondary" onClick={sendSearchRequest}>Search!</button>
+          </div>
         </div>
-          <ul>
-          
-            <li>
-              <select
-                name='sortOption'
-                id='sortOption'
-                value={chosenSortOption}
-                onChange={(e) => setchosenSortOption(e.target.value)}
-              >
-                <option value={null}>Sort by</option>
-                <option value='desc'>Highest Rating First</option>
-                <option value='asc'>Lowest Rating First</option>
-              </select>
-            </li>
-            <li>
-              <button onClick={sendSearchRequest}>Search</button>
-            </li>
-          </ul>
         </div>
         {documents && (
           <div className='search-results'>
             {documents.length > 0 ? (
-              <p class="ml-5 text-white"> Number of hits: {documents.length}</p>
+              <p class="ml-5 mt-1 text-white"> Number of hits: {documents.length}</p>
             ) : (
               <p class="ml-5 text-white"> No results found. Try broadening your search criteria.</p>
             )}
             <div className="row">
                 {documents.map((document) => (
                   <div className="col-md-4">
-                  <div class="card m-1" style={{width: '25rem', height: '19rem'}}>
+                  <div class="card m-1" style={{width: '23rem', height: '19rem'}}>
                     <div class="card-body">
                       <h5 class="card-title">{document._source.name}<span class="badge rounded-pill text-bg-success ms-4">{document._source.rating}</span></h5>
                       <span class="badge text-bg-primary">{document._source.type}</span>
@@ -124,7 +123,7 @@ const App = () => {
                           <span class="badge text-bg-light">{tag}</span>
                         ))
                       }
-                        {/* <small>Tags: {document._source.tags}</small> */}
+
                       <p><small>Official Site: {document._source.officialWebsite}</small></p>
                     </div>
                   </div>
@@ -134,6 +133,7 @@ const App = () => {
             </div>
           </div>
         )}
+      </div>
       </div>
     </div>
   );
