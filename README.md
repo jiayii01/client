@@ -5,11 +5,9 @@ What better way to understand concepts than to implement it in a project! Elasti
 
 ## 💻 User Interface built using React.js and Bootstrap
 
-![ezgif com-video-to-gif (1)](https://github.com/jiayii01/search-for-sg-attractions-with-elasticsearch/assets/79521323/d2071f82-c693-4796-b023-71390ef55fb9)
+![ezgif com-video-to-gif (1)](https://github.com/jiayii01/search-for-sg-attractions-with-elasticsearch/assets/79521323/c8dd33f3-2716-4bf7-a3b4-515041308d93)
 
 ![image](https://github.com/jiayii01/search-for-sg-attractions-with-elasticsearch/assets/79521323/86f3b0ac-3262-43f1-b127-6ae0afdba8d5)
-
-<img width="1235" alt="image" src="https://github.com/jiayii01/sg-attractions-with-elasticsearch/assets/79521323/2b7af736-00ba-4a66-b0d1-ab03eab4202a">
 
 ## 🗾 Mapping of fields in Elastic 
 ```
