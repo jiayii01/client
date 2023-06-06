@@ -113,17 +113,18 @@ const App = () => {
             <div className="row">
                 {documents.map((document) => (
                   <div className="col-md-4">
-                  <div class="card m-1" style={{width: '23rem', height: '21rem'}}>
+                  <div class="card m-1" style={{width: '24rem', height: '21rem'}}>
                     <div class="card-body">
                       <h5 class="card-title">{document._source.name}<span class="badge rounded-pill text-bg-success ms-4">{document._source.rating}</span></h5>
                       <span class="badge text-bg-primary">{document._source.type}</span>
-                      <p class="m-1">Address: {document._source.block} {document._source.streetName} {document._source.floorNumber} {document._source.unitNumber} {document._source.buildingName} {document._source.postalCode}</p>
+                      <p class="m-1"><b>Address: {document._source.block} {document._source.streetName} {document._source.floorNumber} {document._source.unitNumber} {document._source.buildingName} {document._source.postalCode}</b></p>
+                      <p class="m-1"><b>Nearest MRT Station(s):</b> {document._source.nearestMrtStation}</p>
                       {
                         document._source.tags.map((tag) => (
                           <span class="badge text-bg-light">{tag}</span>
                         ))
                       }
-                      <p class="mt-1"><small>Link to Official Site: <a href={document._source.officialWebsite} target="_blank" rel="noreferrer">{document._source.officialWebsite}</a></small></p>
+                      <p class="mt-1"><small class="m-1">Website: <a href={document._source.officialWebsite} target="_blank" rel="noreferrer">{document._source.officialWebsite}</a></small></p>
                     </div>
                   </div>
                   </div>
