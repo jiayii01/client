@@ -123,7 +123,7 @@ const App = () => {
                           <span class="badge text-bg-light">{tag}</span>
                         ))
                       }
-                      <p class="mt-1"><small><a href={document._source.officialWebsite} target="_blank" rel="noreferrer">Link to Official Site: {document._source.officialWebsite}</a></small></p>
+                      <p class="mt-1"><small>Link to Official Site: <a href={document._source.officialWebsite} target="_blank" rel="noreferrer">{document._source.officialWebsite}</a></small></p>
                     </div>
                   </div>
                   </div>
