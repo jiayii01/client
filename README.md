@@ -3,7 +3,9 @@
 ## 👷🏻‍♀️ Why did I build this?
 What better way to understand concepts than to implement it in a project! Elasticsearch is specifically designed for high-speed, real-time search and retrieval of large amounts of data. In order to gain the ability to build robust search functionality into any future work, I decided to embark on a simple project that puts what I've learnt to practice. 
 
-## 💻 User Interface built using React.js and Bootstrap
+Also, as a Singaporean there are places in Singapore that are still undiscovered by me, so this was a really interesting project to work on!
+
+## 💻 User Interface built using ReactJS and Bootstrap
 
 ![ezgif com-video-to-gif (1)](https://github.com/jiayii01/search-for-sg-attractions-with-elasticsearch/assets/79521323/c8dd33f3-2716-4bf7-a3b4-515041308d93)
 
